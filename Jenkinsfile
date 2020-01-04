@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                bat 'Student.java'
+                bat 'javac Student.java'
             }
         }
         stage('Test') { 
