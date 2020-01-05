@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                bat 'javac Student.java'
+                bat 'javac C:\Program Files (x86)\Jenkins\workspace\JenkinsAssignment\Student.java'
             }
         }
         stage('Test') { 
