@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                 sh 'mvn clean -f "student-attendance-jenkins"'
-                 sh 'mvn compile -f "student-attendance-jenkins"'
+                 sh 'mvn clean -f "JenkinsAssignment"'
+                 sh 'mvn compile -f "JenkinsAssignment"'
             }
         }
 	}
