@@ -1,16 +1,24 @@
-pipeline {
+pipeline
+{
     agent any
-    stages {
-        stage('Fetch') {
-            steps {
-                git url: 'https://github.com/MichaelWoj/JenkinsAssignment.git'
+    stages
+    {
+        stage('FetchStage')
+        {
+            steps
+            {
+                git 'https://github.com/MichaelWoj/JenkinsAssignment'
             }
         }
-        stage('Build') { 
+        stage('BuildStage') { 
             steps {
-                bat 'javac Student.java'
+                bat 'javac -cp junit-4.13.jar; Student.java studentTest.java'
             }
-        }
-
-	}
+        } 
+        stage('TestStage') { 
+            steps {
+                bat 'java -cp junit-4.13.jar;hamcrest-core-1.3.jar; org.junit.runner.JUnitCore studentTest'
+            }
+        }   
+    }
 }
