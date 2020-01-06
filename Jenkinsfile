@@ -6,11 +6,11 @@ pipeline {
                 git url: 'https://github.com/MichaelWoj/JenkinsAssignment.git'
             }
         }
-        stage('Build') {
+        stage('Build') { 
             steps {
-                 bat 'mvn clean -f "JenkinsAssignment"'
-                 bat 'mvn compile -f "JenkinsAssignment"'
+                bat 'javac Student.java'
             }
         }
+
 	}
 }
