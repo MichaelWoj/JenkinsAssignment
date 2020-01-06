@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Fetch') {
             steps {
-                sh 'git clone "https://github.com/MichaelWoj/JenkinsAssignment.git"'
+                bat 'git clone "https://github.com/MichaelWoj/JenkinsAssignment.git"'
             }
         }
         stage('Build') {
             steps {
-                 sh 'mvn clean -f "JenkinsAssignment"'
-                 sh 'mvn compile -f "JenkinsAssignment"'
+                 bat 'mvn clean -f "JenkinsAssignment"'
+                 bat 'mvn compile -f "JenkinsAssignment"'
             }
         }
 	}
