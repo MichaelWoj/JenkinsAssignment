@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Fetch') {
             steps {
-                bat 'git clone "https://github.com/MichaelWoj/JenkinsAssignment.git"'
+                git url: 'https://github.com/MichaelWoj/JenkinsAssignment.git'
             }
         }
         stage('Build') {
